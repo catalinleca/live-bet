@@ -7,7 +7,7 @@ import {
 import {
   compose,
 } from 'redux';
-import {Switch, Route, Redirect} from 'react-router-dom';
+import {Switch, Route, Redirect, Link} from 'react-router-dom';
 import Home from "../Home/Home";
 import {EVENT_DETAIL_PATH, HOME_PATH, isObjectEmpty} from "../../utils/constants";
 import EventDetailsPage from "../EventDetailsPage/EventDetailsPage";
@@ -132,10 +132,23 @@ class AppBody extends React.Component {
           padding: '8px'
         }}
       >
+        <Link
+          to={HOME_PATH}
+          style={{
+            textDecoration: 'none'
+          }}
+        >
+          <Button
+            variant='outlined'
+          >
+            Home
+          </Button>
+        </Link>
         <Button
           variant='contained'
           color='primary'
           onClick={() => this.setIsDecimal(!this.state.isDecimal)}
+          style={{marginLeft: '8px'}}
         >
           {
             isDecimal ? 'Decimal' : 'Fractional'
@@ -143,6 +156,8 @@ class AppBody extends React.Component {
         </Button>
       </Grid>
     )
+
+
 
     return (
       <React.Fragment>

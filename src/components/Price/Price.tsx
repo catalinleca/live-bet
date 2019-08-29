@@ -13,6 +13,7 @@ import {
 } from 'redux';
 import Grid from "@material-ui/core/Grid";
 import {AppBodyContext} from "../../containers/AppBody/AppBody";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const styles = (theme: Theme): StyleRules => ({
   root: {},
@@ -24,6 +25,7 @@ const styles = (theme: Theme): StyleRules => ({
 interface IPriceComponentProps {
   price: any,
   disabled?: boolean
+  increased?: any;
 }
 
 //from state
@@ -32,7 +34,7 @@ interface IPriceProps extends IPriceComponentProps {
 
 type PriceType = IPriceProps & WithStyles<keyof ReturnType<typeof styles>>;
 
-const Price: React.FC<PriceType> = ({price, classes, disabled}) => {
+const Price: React.FC<PriceType> = ({price, classes, disabled, increased}) => {
   return (
     <Grid>
       <AppBodyContext.Consumer>
@@ -42,12 +44,21 @@ const Price: React.FC<PriceType> = ({price, classes, disabled}) => {
             className={classes.buttonStyle}
             disabled={disabled}
           >
+
             {
               !disabled
-              ? isDecimal
+                ? isDecimal
                 ? (+price.decimal).toFixed(2)
                 : `${price.den}/${price.num}`
-              : 'Susp'
+                : 'Susp'
+            }
+            {
+              !disabled && increased !== undefined &&
+                <FontAwesomeIcon
+                  icon={increased ? 'arrow-down' : 'arrow-up'}
+                  size='xs'
+                  style={{marginLeft: '4px'}}
+                />
             }
           </Button>
         )}

@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   Button,
   ExpansionPanel, ExpansionPanelDetails, ExpansionPanelSummary, Grid,
-  Theme, Typography,
+  Theme, Tooltip, Typography,
   withStyles,
   WithStyles,
 } from '@material-ui/core';
@@ -16,7 +16,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import MarketElement from "../MarketElement/MarketElement";
 import {messageTypes, sendMessage} from "../../websocket/websocket";
 import {Link} from "react-router-dom";
-import {EVENT_DETAIL_PATH, HOME_PATH, isObjectEmpty} from "../../utils/constants";
+import {EVENT_DETAIL_PATH, isObjectEmpty} from "../../utils/constants";
 
 const styles = (theme: Theme): StyleRules => ({
   root: {
@@ -128,27 +128,31 @@ class EventElement extends React.Component<EventElementType, {}> {
           direction='row'
           alignItems='center'
         >
-          <Grid
-            item={true}
-            xs={2}
-          >
-            <Link
-              to={!isDetailPage ? `${EVENT_DETAIL_PATH}/${event.eventId}` : HOME_PATH}
-              style={{
-                textDecoration: 'none'
-              }}
+          {
+            !isDetailPage &&
+            <Grid
+              item={true}
+              xs={2}
             >
-              <Button
-                variant='outlined'
+              <Link
+                to={`${EVENT_DETAIL_PATH}/${event.eventId}`}
+                style={{
+                  textDecoration: 'none'
+                }}
               >
-                {!isDetailPage ? 'All Markets' : 'Home'}
-              </Button>
-            </Link>
-
-          </Grid>
+                <Tooltip title='All Markets' aria-label='all-markets' placement='top'>
+                  <Button
+                    variant='outlined'
+                  >
+                    All
+                  </Button>
+                </Tooltip>
+              </Link>
+            </Grid>
+          }
           <Grid
             item={true}
-            xs={10}
+            xs={!isDetailPage ? 10 : 12}
           >
             <ExpansionPanel>
               <ExpansionPanelSummary

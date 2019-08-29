@@ -40,38 +40,9 @@ type OutcomeElementType = IOutcomeElementProps & WithStyles<keyof ReturnType<typ
 
 class OutcomeElement extends React.Component<OutcomeElementType, {}> {
   public state : {
-    outcome: IIndexSignature
+    increased: any
   } = {
-    outcome: {}
-  }
-
-  public listener = (data) => {
-    const {
-      event,
-      market,
-      outcome
-    } = this.props;
-
-    // const {
-      // outcome
-    // } = this.state;
-
-    if (data.type === 'PRICE_CHANGE' || data.type === 'OUTCOME_STATUS') {
-      if (data.data.outcomeId === this.state.outcome.outcomeId) {
-        console.log(`${data.type} change: ${event.name} -> ${market.name} -> ${outcome.name}`)
-        console.log('oldOutcome: ', outcome)
-        const newOutcome = _.cloneDeep(outcome);
-
-        newOutcome.price = {...data.data.price}
-        newOutcome.status =  {...data.data.status}
-
-        console.log('newOutcome: ', newOutcome);
-
-        this.setState({
-          outcome: newOutcome
-        })
-      }
-    }
+    increased: undefined
   }
 
   componentDidMount() {
@@ -79,28 +50,25 @@ class OutcomeElement extends React.Component<OutcomeElementType, {}> {
       outcome
     } = this.props;
 
-    // w.addEventListener("message", e => this.listener(JSON.parse(e.data))); // logs all data to console
     w.send(JSON.stringify({type: messageTypes.subscribeType, keys: [`o.${outcome.outcomeId}`], clearSubscription: false}));
-    //
-    // this.setState({
-    //   outcome: {...this.props.outcome}
-    // })
   }
 
   componentWillUnmount(): void {
     w.send(JSON.stringify({ type: messageTypes.unsubscribeType, keys: [`o.${this.props.outcome.outcomeId}`] }));
   }
 
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   return !(_.isEqual(nextState.outcome, this.state.outcome));
-  // }
-
   shouldComponentUpdate(nextProps, nextState) {
-    // console.log('should MarketElement update: ')
-    // console.log('this.props: ', this.props)
-    // console.log('nextProps: ', nextProps)
+    return !(_.isEqual(nextProps, this.props)) || this.state.increased !== nextState.increased
+  }
 
-    return !(_.isEqual(nextProps, this.props))
+  componentDidUpdate(nextProps) {
+    const oldValue = parseFloat(this.props.outcome.price.decimal)
+    const newValue = parseFloat(nextProps.outcome.price.decimal)
+
+    oldValue !== newValue &&
+      this.setState({
+        increased: newValue > oldValue
+      })
   }
 
   render() {
@@ -134,6 +102,7 @@ class OutcomeElement extends React.Component<OutcomeElementType, {}> {
               >
                 <Price
                   disabled={outcome.status.suspended}
+                  increased={this.state.increased}
                   price={outcome.price}
                 />
               </Grid>

@@ -67,19 +67,7 @@ class MarketElement extends React.Component<MarketElementType, {}> {
     market: {}
   }
 
-
-
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   return (nextProps.outcomes !== undefined && !isArrayEqual(nextProps.outcomes, this.props.outcomes))|| !(_.isEqual(nextState.market, this.state.market))
-  // }
-
   shouldComponentUpdate(nextProps, nextState) {
-    // console.log('should MarketElement update: ')
-    // console.log('this.props: ', this.props)
-    // console.log('nextProps: ', nextProps)
-    // console.log(nextProps.outcomes !== undefined && !_.isEqual(this.props.outcomes, nextProps.outcomes))
-    // return (nextProps.outcomes !== undefined && !_.isEqual(this.props.outcomes, nextProps.outcomes)) && (_.isEqual(this.props.market, nextProps.market))
-
     if (nextProps.outcomes !== undefined) {
       if (!_.isEqual(this.props.outcomes, nextProps.outcomes)) {
         return true
@@ -87,8 +75,6 @@ class MarketElement extends React.Component<MarketElementType, {}> {
     } else if (!_.isEqual(this.props.market.status, nextProps.market.status)) {
       return true
     }
-    // console.log('this.props: ', this.props)
-    // console.log('nextProps: ', nextProps)
     return false
   }
 
@@ -108,43 +94,10 @@ class MarketElement extends React.Component<MarketElementType, {}> {
     })
   }
 
-  public listener = (data) => {
-    const {
-      event
-    } = this.props;
-
-    const {
-      market
-    } = this.state
-    if (data.type === 'MARKET_STATUS') {
-      if (data.data.marketId === this.state.market.marketId) {
-        console.log(`MARKET_STATUS change: ${event.name} -> ${market.name}`)
-
-        console.log('oldMarket: ', market)
-        const newMarket = _.cloneDeep(market);
-
-        newMarket.status =  {...data.data.status}
-
-        console.log('newMarket: ', newMarket);
-
-        this.setState({
-          market: newMarket
-        })
-      }
-    }
-  }
-
   componentDidMount() {
     this.props.marketKey < 10 && this.onClickMarketHandler()
-    //
-    // w.addEventListener("message", e => this.listener(JSON.parse(e.data))); // logs all data to console
-    //
-    w.send(JSON.stringify({type: messageTypes.subscribeType, keys: [`m.${this.props.market.marketId}`], clearSubscription: false}));
-    //
-    // this.setState({
-    //   market: {...this.props.market}
-    // })
 
+    w.send(JSON.stringify({type: messageTypes.subscribeType, keys: [`m.${this.props.market.marketId}`], clearSubscription: false}));
   }
 
   componentWillUnmount(): void {

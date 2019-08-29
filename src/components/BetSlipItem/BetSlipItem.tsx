@@ -24,6 +24,7 @@ interface IBetSlipItemComponentProps {
   eventName?: any;
   outcome?: any;
   removeItem?: any;
+  increased?: any;
 }
 
 //from state
@@ -32,77 +33,96 @@ interface IBetSlipItemProps extends IBetSlipItemComponentProps {
 
 type BetSlipItemType = IBetSlipItemProps & WithStyles<keyof ReturnType<typeof styles>>;
 
-const BetSlipItem: React.FC<BetSlipItemType> = ({classes, eventName, removeItem, marketName, outcome}) => {
+class BetSlipItem extends React.Component<BetSlipItemType, {}> {
+  public state = {
+    increased: undefined
+  }
 
-  return (
-    <React.Fragment>
-      {
-        marketName &&
-        <Grid
-          container={true}
-          direction='column'
-        >
+  componentDidUpdate(nextProps) {
+    const oldValue = parseFloat(this.props.outcome.price.decimal)
+    const newValue = parseFloat(nextProps.outcome.price.decimal)
+
+    oldValue !== newValue &&
+      this.setState({
+        increased: newValue > oldValue
+      })
+  }
+
+  render() {
+    const {eventName, removeItem, marketName, outcome} = this.props
+
+    const {increased } = this.state;
+
+    return (
+      <React.Fragment>
+        {
           <Grid
-            item={true}
+            container={true}
+            direction='column'
           >
             <Grid
-              container={true}
-              direction='row'
-              alignItems='center'
-
+              item={true}
             >
               <Grid
                 container={true}
-                item={true}
                 direction='row'
-                justify='space-between'
                 alignItems='center'
-                spacing={1}
-                style={{
-                  padding: '8px'
-                }}
-                xs={11}
+
               >
                 <Grid
+                  container={true}
                   item={true}
-                  xs={12}
+                  direction='row'
+                  justify='space-between'
+                  alignItems='center'
+                  spacing={1}
+                  style={{
+                    padding: '8px'
+                  }}
+                  xs={11}
                 >
-                  {marketName}
+                  <Grid
+                    item={true}
+                    xs={12}
+                  >
+                    {marketName && marketName}
+                  </Grid>
+                  <Grid
+                    item={true}
+                    md={6}
+                    xs={12}
+                  >
+                    {outcome.name}
+                  </Grid>
+                  <Grid
+                    item={true}
+                    xs={12}
+                    md={6}
+                  >
+                    <Price
+                      price={outcome.price}
+                      increased={increased}
+                    />
+                  </Grid>
                 </Grid>
                 <Grid
                   item={true}
-                  md={6}
-                  xs={12}
+                  xs={1}
                 >
-                  {outcome.name}
+                  <IconButton
+                    onClick={() => removeItem(eventName, marketName)}
+                  >
+                    <FontAwesomeIcon icon='times' size='xs'/>
+                  </IconButton>
                 </Grid>
-                <Grid
-                  item={true}
-                  xs={12}
-                  md={6}
-                >
-                  <Price
-                    price={outcome.price}
-                  />
-                </Grid>
-              </Grid>
-              <Grid
-                item={true}
-                xs={1}
-              >
-                <IconButton
-                  onClick={() => removeItem(eventName, marketName)}
-                >
-                  <FontAwesomeIcon icon='times' size='xs'/>
-                </IconButton>
               </Grid>
             </Grid>
+            <Divider/>
           </Grid>
-          <Divider/>
-        </Grid>
-      }
-    </React.Fragment>
-  );
+        }
+      </React.Fragment>
+    );
+  }
 }
 
 export default compose<React.ComponentClass<IBetSlipItemComponentProps>>(
