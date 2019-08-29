@@ -49,8 +49,13 @@ class AppBody extends React.Component {
       betSlipOutcomes
     } = this.state;
 
-    if (betSlipOutcomes && (market.status.suspended || !market.status.displayable)) {
-      this.removeItem(eventName, market.name)
+    if (
+      betSlipOutcomes
+      && betSlipOutcomes[eventName][market.name]
+    ) {
+      if (market.status.suspended || !market.status.displayable) {
+        this.removeItem(eventName, market.name)
+      }
     }
   }
 
