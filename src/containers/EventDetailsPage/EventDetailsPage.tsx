@@ -96,7 +96,9 @@ class EventDetailsPage extends React.Component<EventDetailsPageType, {}> {
       const changedOutcome = data.data;
 
       if (marketOutcomes[changedOutcome.marketId]) {
-        console.log(`${data.type} changed: ${event.name} --> ${eventMarkets[changedOutcome.marketId].name} --> ${marketOutcomes[changedOutcome.marketId][changedOutcome.outcomeId].name}`)
+        const market = eventMarkets[changedOutcome.marketId];
+
+        console.log(`${data.type} changed: ${event.name} --> ${market.name} --> ${marketOutcomes[changedOutcome.marketId][changedOutcome.outcomeId].name}`)
 
         const oldOutcome = marketOutcomes[changedOutcome.marketId][changedOutcome.outcomeId]
 
@@ -119,14 +121,13 @@ class EventDetailsPage extends React.Component<EventDetailsPageType, {}> {
         /** updateLiveOutcome */
 
         const eventName = event.name;
-        const market = eventMarkets[changedOutcome.marketId];
 
         const updateOutcome = _.cloneDeep(newOutcome)
 
         this.props.liveUpdateOutcome(eventName, market, updateOutcome)
 
         console.log('Will change in 5 seconds. Copy market name below')
-        console.log(eventMarkets[changedOutcome.marketId].name)
+        console.log(market.name)
 
         setTimeout( () => {
           this.setState({
@@ -144,9 +145,9 @@ class EventDetailsPage extends React.Component<EventDetailsPageType, {}> {
 
       const changedMarket = data.data;
 
-      console.log(`${data.type} changed: ${event.name} --> ${eventMarkets[changedMarket.marketId].name}`)
-
       const oldMarket = eventMarkets[changedMarket.marketId]
+
+      console.log(`${data.type} changed: ${event.name} --> ${oldMarket.name}`)
 
       console.log('oldMarket: ', oldMarket);
 
@@ -171,7 +172,7 @@ class EventDetailsPage extends React.Component<EventDetailsPageType, {}> {
       newMarket && this.props.liveUpdateMarket(eventName, updateMarket)
 
       console.log('Will change in 5 seconds. Copy market name below')
-      console.log(eventMarkets[changedMarket.marketId].name)
+      console.log(oldMarket.name)
 
       setTimeout( () => {
         this.setState({

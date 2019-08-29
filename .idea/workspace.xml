@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="531ccacb-8365-4ca5-886a-e5ea680acb00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/AppBody/AppBody.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/AppBody/AppBody.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/EventDetailsPage/EventDetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/EventDetailsPage/EventDetailsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Home/Home.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,14 +19,14 @@
     <favorites_list name="skybet" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.51012146">
+    <splitter split-orientation="horizontal" split-proportion="0.52458066">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/containers/AppBody/AppBody.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="247">
-                  <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+                <state relative-caret-position="-385">
+                  <caret line="70" column="7" lean-forward="true" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -33,11 +34,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/containers/EventDetailsPage/EventDetailsPage.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="965">
-                  <caret line="172" selection-start-line="172" selection-end-line="172" />
+                <state relative-caret-position="506">
+                  <caret line="122" column="33" lean-forward="true" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -76,8 +77,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/containers/Home/Home.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="159" column="77" selection-start-line="159" selection-start-column="77" selection-end-line="159" selection-end-column="77" />
+                <state relative-caret-position="607">
+                  <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -103,12 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>should</find>
-      <find>_.isE</find>
-      <find>Player To Score A Brace</find>
-      <find>&lt;Outc</find>
-      <find>&lt;MArket</find>
-      <find>didM</find>
       <find>&lt;Market</find>
       <find>c</find>
       <find>&lt;Outcome</find>
@@ -130,9 +125,15 @@
       <find>liveUpdateMarket</find>
       <find>removeItem</find>
       <find>console.log(</find>
-      <find>console.log</find>
       <find>setTimeout</find>
       <find>setTime</find>
+      <find>console.log</find>
+      <find>markets[changedOutcome.eventId][changedOutcome.marketId</find>
+      <find>(markets[changedMarket.eventId][changedMarket.marketId</find>
+      <find>markets[changedMarket.eventId][changedMarket.marketId</find>
+      <find>ewMarkets[changedMarket.marketId</find>
+      <find>eventMarkets[changedMarket.marketId]</find>
+      <find>eventMarkets[changedOutcome.marketId]</find>
     </findStrings>
     <replaceStrings>
       <replace>EventComponent</replace>
@@ -173,9 +174,9 @@
         <option value="$PROJECT_DIR$/src/App.tsx" />
         <option value="$PROJECT_DIR$/src/components/MarketElement/MarketElement.tsx" />
         <option value="$PROJECT_DIR$/src/components/OutcomeElement/OutcomeElement.tsx" />
+        <option value="$PROJECT_DIR$/src/containers/AppBody/AppBody.tsx" />
         <option value="$PROJECT_DIR$/src/containers/Home/Home.tsx" />
         <option value="$PROJECT_DIR$/src/containers/EventDetailsPage/EventDetailsPage.tsx" />
-        <option value="$PROJECT_DIR$/src/containers/AppBody/AppBody.tsx" />
       </list>
     </option>
   </component>
@@ -265,12 +266,12 @@
       <workItem from="1566945041967" duration="8822000" />
       <workItem from="1566983590924" duration="20857000" />
       <workItem from="1567021502482" duration="92000" />
-      <workItem from="1567030612969" duration="6577000" />
+      <workItem from="1567030612969" duration="7154000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182007000" />
+    <option name="totallyTimeSpent" value="182584000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-229" width="1936" height="1056" extended-state="6" />
@@ -291,7 +292,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33261105" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.032502707" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -487,10 +488,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/AppBody/AppBody.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-385">
+          <caret line="70" column="7" lean-forward="true" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Home/Home.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="159" column="77" selection-start-line="159" selection-start-column="77" selection-end-line="159" selection-end-column="77" />
+        <state relative-caret-position="607">
+          <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -499,18 +510,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/EventDetailsPage/EventDetailsPage.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="965">
-          <caret line="172" selection-start-line="172" selection-end-line="172" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/AppBody/AppBody.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        <state relative-caret-position="506">
+          <caret line="122" column="33" lean-forward="true" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

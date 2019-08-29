@@ -127,9 +127,11 @@ class Home extends React.Component<HomeType, {}> {
 
       const changedMarket = data.data;
 
-      console.log(`${data.type} changed: ${markets[changedMarket.eventId][changedMarket.marketId].name}`)
+      const eventName = eventNameMap[changedMarket.eventId];
 
       const oldMarket = markets[changedMarket.eventId][changedMarket.marketId]
+
+      console.log(`${data.type} changed: ${eventName} --> ${oldMarket.name}`)
 
       console.log('oldMarket: ', oldMarket);
 
@@ -148,7 +150,6 @@ class Home extends React.Component<HomeType, {}> {
 
       /** liveUpdateMarket */
 
-      const eventName = eventNameMap[changedMarket.eventId];
 
       const updateMarket = _.cloneDeep(newMarket);
       console.log('updateMarket: ', updateMarket)
@@ -157,7 +158,7 @@ class Home extends React.Component<HomeType, {}> {
       this.props.liveUpdateMarket(eventName, updateMarket)
 
       console.log('Will change in 5 seconds. Copy market name below')
-      console.log(markets[changedMarket.eventId][changedMarket.marketId].name)
+      console.log(oldMarket.name)
 
       setTimeout( () => {
         this.setState({
@@ -179,7 +180,10 @@ class Home extends React.Component<HomeType, {}> {
 
 
       if (outcomes[changedOutcome.marketId]) {
-        console.log(`${data.type} changed: ${markets[changedOutcome.eventId][changedOutcome.marketId].name} --> ${outcomes[changedOutcome.marketId][changedOutcome.outcomeId].name}`)
+        const eventName = eventNameMap[changedOutcome.eventId]
+        const market = markets[changedOutcome.eventId][changedOutcome.marketId]
+
+        console.log(`${data.type} changed: ${eventName} --> ${market.name} --> ${outcomes[changedOutcome.marketId][changedOutcome.outcomeId].name}`)
 
         const oldOutcome = outcomes[changedOutcome.marketId][changedOutcome.outcomeId]
 
@@ -200,15 +204,13 @@ class Home extends React.Component<HomeType, {}> {
         // console.log('new state: ', newOutcomes)
 
         /** updateLiveSlip */
-        const eventName = eventNameMap[changedOutcome.eventId]
-        const market = markets[changedOutcome.eventId][changedOutcome.marketId]
 
         const updateOutcome = _.cloneDeep(newOutcome)
 
         this.props.liveUpdateOutcome(eventName, market, updateOutcome)
 
         console.log('Will change in 5 seconds. Copy market name below')
-        console.log(markets[changedOutcome.eventId][changedOutcome.marketId].name)
+        console.log(market.name)
 
         setTimeout( () => {
           this.setState({
