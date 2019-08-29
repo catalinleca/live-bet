@@ -27,7 +27,8 @@ interface IIndexSignature {
 }
 
 interface IEventDetailsPageComponentProps {
-  event: IIndexSignature
+  liveUpdateOutcome?: any
+  liveUpdateMarket?: any
 }
 
 //from state
@@ -115,12 +116,25 @@ class EventDetailsPage extends React.Component<EventDetailsPageType, {}> {
         // console.log('oldState: ', marketOutcomes)
         // console.log('newState: ', newMarketOutcomes)
 
-        this.setState({
-          marketOutcomes: newMarketOutcomes
-        })
+        /** updateLiveOutcome */
+
+        const eventName = event.name;
+        const market = eventMarkets[changedOutcome.marketId];
+
+        const updateOutcome = _.cloneDeep(newOutcome)
+
+        this.props.liveUpdateOutcome(eventName, market, updateOutcome)
+
+        console.log('Will change in 5 seconds. Copy market name below')
+        console.log(eventMarkets[changedOutcome.marketId].name)
+
+        setTimeout( () => {
+          this.setState({
+            marketOutcomes: newMarketOutcomes
+          })
+          console.log('changed')
+        }, 5000)
       }
-
-
     }
     else if (data.type === 'MARKET_STATUS') {
       const {
@@ -149,9 +163,22 @@ class EventDetailsPage extends React.Component<EventDetailsPageType, {}> {
       // console.log('old state eventMarkets: ', eventMarkets);
       // console.log('new state newEventMarkets: ', newEventMarkets)
 
-      this.setState({
-        eventMarkets: newEventMarkets
-      })
+      /** liveUpdateMarket */
+
+      const eventName = event.name;
+
+      const updateMarket = _.cloneDeep(newMarket);
+      newMarket && this.props.liveUpdateMarket(eventName, updateMarket)
+
+      console.log('Will change in 5 seconds. Copy market name below')
+      console.log(eventMarkets[changedMarket.marketId].name)
+
+      setTimeout( () => {
+        this.setState({
+          eventMarkets: newEventMarkets
+        })
+        console.log('changed')
+      }, 5000)
     }
     else if (data.type === 'ERROR' && data.data.actionType === 'setMarkets') {
       this.setMarkets()

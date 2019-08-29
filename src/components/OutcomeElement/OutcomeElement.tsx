@@ -106,7 +106,9 @@ class OutcomeElement extends React.Component<OutcomeElementType, {}> {
   render() {
     const {
       market,
-      event,
+      event: {
+        name: eventName
+      },
       updateSlip,
       outcome
     } = this.props;
@@ -128,7 +130,7 @@ class OutcomeElement extends React.Component<OutcomeElementType, {}> {
                 {outcome.name}
               </Grid>
               <Grid
-                onClick={() => !outcome.status.suspended && updateSlip({event, market, outcome})}
+                onClick={() => !outcome.status.suspended && updateSlip({eventName, market, outcome})}
               >
                 <Price
                   disabled={outcome.status.suspended}

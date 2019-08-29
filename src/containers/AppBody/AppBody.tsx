@@ -44,7 +44,35 @@ class AppBody extends React.Component {
     isDecimal: true
   }
 
-  public updateSlip = ({event, market, outcome}) => {
+  public liveUpdateMarket = (eventName, market) => {
+    const {
+      betSlipOutcomes
+    } = this.state;
+
+    if (betSlipOutcomes && (market.status.suspended || !market.status.displayable)) {
+      this.removeItem(eventName, market.name)
+    }
+  }
+
+  public liveUpdateOutcome = (eventName, market, outcome) => {
+    const {
+      betSlipOutcomes
+    } = this.state;
+
+    if (
+      betSlipOutcomes[eventName]
+      && betSlipOutcomes[eventName][market.name]
+      && outcome.outcomeId === betSlipOutcomes[eventName][market.name].outcomeId
+    ) {
+      if (outcome.status.suspended || !outcome.status.displayable) {
+        this.removeItem(eventName, market.name)
+      } else if (betSlipOutcomes[eventName][market.name].name) {
+        this.updateSlip({eventName, market, outcome})
+      }
+    }
+  }
+
+  public updateSlip = ({eventName, market, outcome}) => {
 
     const {
       betSlipOutcomes
@@ -54,8 +82,8 @@ class AppBody extends React.Component {
       ...betSlipOutcomes
     }
 
-    newBetSlip[event.name] = {
-      ...betSlipOutcomes[event.name],
+    newBetSlip[eventName] = {
+      ...betSlipOutcomes[eventName],
       [market.name]: outcome
     }
 
@@ -132,8 +160,8 @@ class AppBody extends React.Component {
             >
               <Switch>
                 <Redirect from={`/`} to={`${HOME_PATH}`} exact={true}/>
-                <Route path={`${HOME_PATH}`} component={Home}/>
-                <Route path={`${EVENT_DETAIL_PATH}/:id`} component={EventDetailsPage}/>
+                <Route path={`${HOME_PATH}`} render={props => <Home liveUpdateOutcome={this.liveUpdateOutcome} liveUpdateMarket={this.liveUpdateMarket} {...props}/>}/>
+                <Route path={`${EVENT_DETAIL_PATH}/:id`} render={props => <EventDetailsPage liveUpdateOutcome={this.liveUpdateOutcome} liveUpdateMarket={this.liveUpdateMarket} {...props}/>}/>
               </Switch>
             </Grid>
             <Grid

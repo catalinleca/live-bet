@@ -35,7 +35,8 @@ interface IIndexSignature {
 }
 
 interface IHomeComponentProps {
-  events: any
+  liveUpdateOutcome?: any
+  liveUpdateMarket?: any
 }
 
 //from state
@@ -50,7 +51,7 @@ class Home extends React.Component<HomeType, {}> {
   public outcomes: IIndexSignature = {};
   public state = {
     categories: {},
-    events: [],
+    eventNameMap: {},
     markets: {},
     outcomes: {}
   }
@@ -58,6 +59,14 @@ class Home extends React.Component<HomeType, {}> {
   public stateManagement = (data) => {
     if (data.type === 'LIVE_EVENTS_DATA') {
       const events = data.data;
+
+      const eventNameMap = events.reduce( (acc, currentValue: any) => {
+        return {
+          ...acc,
+          [currentValue.eventId]: currentValue.name
+        }
+      })
+
 
       const categories = events.reduce( (acc, currentValue) => {
         if (currentValue.linkedEventTypeName) {
@@ -82,6 +91,7 @@ class Home extends React.Component<HomeType, {}> {
 
       this.setState({
         categories: categories,
+        eventNameMap
       })
     }
     else if (data.type === 'MARKET_DATA') {
@@ -111,7 +121,8 @@ class Home extends React.Component<HomeType, {}> {
     }
     else if (data.type === 'MARKET_STATUS') {
       const {
-        markets
+        markets,
+        eventNameMap
       } = this.state;
 
       const changedMarket = data.data;
@@ -135,14 +146,31 @@ class Home extends React.Component<HomeType, {}> {
       // console.log('old state: ', markets);
       // console.log('new state: ', newMarkets)
 
-      this.setState({
-        markets: newMarkets
-      })
+      /** liveUpdateMarket */
+
+      const eventName = eventNameMap[changedMarket.eventId];
+
+      const updateMarket = _.cloneDeep(newMarket);
+      console.log('updateMarket: ', updateMarket)
+
+
+      this.props.liveUpdateMarket(eventName, updateMarket)
+
+      console.log('Will change in 5 seconds. Copy market name below')
+      console.log(markets[changedMarket.eventId][changedMarket.marketId].name)
+
+      setTimeout( () => {
+        this.setState({
+          markets: newMarkets
+        })
+        console.log('changed')
+      }, 5000)
     }
     else  if (data.type === 'PRICE_CHANGE' || data.type === 'OUTCOME_STATUS') {
       const {
         outcomes,
-        markets
+        markets,
+        eventNameMap
       } = this.state;
 
       const changedOutcome = data.data;
@@ -171,9 +199,23 @@ class Home extends React.Component<HomeType, {}> {
         // console.log('old state: ', outcomes)
         // console.log('new state: ', newOutcomes)
 
-        this.setState({
-          outcomes: newOutcomes
-        })
+        /** updateLiveSlip */
+        const eventName = eventNameMap[changedOutcome.eventId]
+        const market = markets[changedOutcome.eventId][changedOutcome.marketId]
+
+        const updateOutcome = _.cloneDeep(newOutcome)
+
+        this.props.liveUpdateOutcome(eventName, market, updateOutcome)
+
+        console.log('Will change in 5 seconds. Copy market name below')
+        console.log(markets[changedOutcome.eventId][changedOutcome.marketId].name)
+
+        setTimeout( () => {
+          this.setState({
+            outcomes: newOutcomes
+          })
+          console.log('changed')
+        }, 5000)
 
       }
     }
