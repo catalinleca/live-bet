@@ -19,6 +19,8 @@ import OutcomeElement from "../OutcomeElement/OutcomeElement";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {AppBodyContext} from "../../containers/AppBody/AppBody";
 import {isObjectEmpty} from "../../utils/constants";
+import CorrectScoreOutcomes from "../CorrectScoreOutcomes/CorrectScoreOutcomes";
+import WinDrawWinOutcomes from "../WinDrawWinOutcomes/WinDrawWinOutcomes";
 
 const styles = (theme: Theme): StyleRules => ({
   root: {
@@ -158,26 +160,40 @@ class MarketElement extends React.Component<MarketElementType, {}> {
                   <AppBodyContext.Consumer>
                     { ({updateSlip}) =>
 
-                      outcomes && !isObjectEmpty(outcomes) ?
-                        Object.values(outcomes).map( (outcome: any, index) => {
-                            return (
-                              <Grid
-                                key={`${outcome.outcomeId}${index}`}
-                              >
-                                <Grid
-                                  className={classes.outcomeElement}
-                                >
-                                  <OutcomeElement
-                                    outcome={outcome}
-                                    market={market}
-                                    event={event}
-                                    updateSlip={updateSlip}
-                                  />
-                                </Grid>
-                                <Divider/>
-                              </Grid>
-                            )
-                          })
+                      outcomes && !isObjectEmpty(outcomes)
+                        ? market.type === 'correct-score'
+                          ? <CorrectScoreOutcomes
+                              outcomes={outcomes}
+                              market={market}
+                              event={event}
+                              updateSlip={updateSlip}
+                            />
+                          : market.type === 'win-draw-win'
+                            ? <WinDrawWinOutcomes
+                                outcomes={outcomes}
+                                market={market}
+                                event={event}
+                                updateSlip={updateSlip}
+                              />
+                            : Object.values(outcomes).map( (outcome: any, index) => {
+                                return (
+                                  <Grid
+                                    key={`${outcome.outcomeId}${index}`}
+                                  >
+                                    <Grid
+                                      className={classes.outcomeElement}
+                                    >
+                                      <OutcomeElement
+                                        outcome={outcome}
+                                        market={market}
+                                        event={event}
+                                        updateSlip={updateSlip}
+                                      />
+                                    </Grid>
+                                    <Divider/>
+                                  </Grid>
+                                )
+                            })
                         : ''
                     }
                   </AppBodyContext.Consumer>

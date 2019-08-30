@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="531ccacb-8365-4ca5-886a-e5ea680acb00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BetSlipItem/BetSlipItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BetSlipItem/BetSlipItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EventElement/EventElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EventElement/EventElement.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CorrectScoreOutcomes/CorrectScoreOutcomes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CorrectScoreOutcomes/CorrectScoreOutcomes.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MarketElement/MarketElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MarketElement/MarketElement.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/OutcomeElement/OutcomeElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OutcomeElement/OutcomeElement.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Price/Price.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Price/Price.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/AppBody/AppBody.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/AppBody/AppBody.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WinDrawWinOutcomes/WinDrawWinOutcomes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WinDrawWinOutcomes/WinDrawWinOutcomes.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,38 +21,14 @@
     <favorites_list name="skybet" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.52458066">
+    <splitter split-orientation="horizontal" split-proportion="0.4268363">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/containers/AppBody/AppBody.tsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="399">
-                  <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/containers/Home/Home.tsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="217">
-                  <caret line="290" column="35" lean-forward="true" selection-start-line="290" selection-start-column="35" selection-end-line="290" selection-end-column="35" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/containers/EventDetailsPage/EventDetailsPage.tsx">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="282">
-                  <caret line="236" column="22" lean-forward="true" selection-start-line="236" selection-start-column="22" selection-end-line="236" selection-end-column="22" />
+                  <caret line="242" column="35" lean-forward="true" selection-start-line="242" selection-start-column="35" selection-end-line="242" selection-end-column="35" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -63,22 +37,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/BetSlipItem/BetSlipItem.tsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1033">
-                  <caret line="119" selection-start-line="119" selection-end-line="119" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/EventElement/EventElement.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="142" column="84" selection-start-line="142" selection-start-column="84" selection-end-line="142" selection-end-column="84" />
+                <state relative-caret-position="-4">
+                  <caret line="145" column="19" lean-forward="true" selection-start-line="145" selection-start-column="19" selection-end-line="145" selection-end-column="19" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -89,8 +51,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/MarketElement/MarketElement.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="367">
-                  <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
+                <state relative-caret-position="28">
+                  <caret line="171" column="40" selection-start-line="171" selection-start-column="40" selection-end-line="171" selection-end-column="40" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -98,11 +60,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/containers/BetSlip/BetSlip.tsx">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/components/CorrectScoreOutcomes/CorrectScoreOutcomes.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-622">
-                  <caret line="69" column="39" lean-forward="true" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+                <state relative-caret-position="333">
+                  <caret line="88" selection-start-line="88" selection-end-line="88" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -113,12 +75,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/OutcomeElement/OutcomeElement.tsx">
+            <entry file="file://$PROJECT_DIR$/src/components/WinDrawWinOutcomes/WinDrawWinOutcomes.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="7">
-                  <caret line="60" selection-start-line="60" selection-end-line="60" />
+                <state relative-caret-position="212">
+                  <caret line="39" selection-start-line="39" selection-end-line="39" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -127,34 +89,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/components/Price/Price.tsx">
+            <entry file="file://$PROJECT_DIR$/src/components/OutcomeElement/OutcomeElement.tsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="415">
-                  <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/containers/Home/Home.tsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1723">
-                  <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/BetSlipItem/BetSlipItem.tsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="918">
-                  <caret line="54" selection-start-line="54" selection-end-line="54" />
+                <state relative-caret-position="272">
+                  <caret line="82" selection-start-line="82" selection-end-line="82" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -168,10 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>render in</find>
-      <find>new state</find>
-      <find>redux</find>
-      <find>PRICE_C</find>
       <find>updateSlip(</find>
       <find>liveUpdateSlip</find>
       <find>liveUpdate</find>
@@ -198,6 +132,10 @@
       <find>&lt;Price</find>
       <find>&lt;Link</find>
       <find>19</find>
+      <find>.sort</find>
+      <find>&lt;CorrectS</find>
+      <find>EventDet</find>
+      <find>acc, curr</find>
     </findStrings>
     <replaceStrings>
       <replace>EventComponent</replace>
@@ -226,29 +164,29 @@
         <option value="$PROJECT_DIR$/src/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/Event/Event.tsx" />
         <option value="$PROJECT_DIR$/src/components/EventTypeWidget/EventTypeWidget.tsx" />
-        <option value="$PROJECT_DIR$/src/components/WinDrawWinOutcomes/WinDrawWinOutcomes.tsx" />
         <option value="$PROJECT_DIR$/src/websocket/websocket.ts" />
         <option value="$PROJECT_DIR$/src/containers/BetSlip/BetSlip.tsx" />
-        <option value="$PROJECT_DIR$/src/components/CorrectScoreOutcomes/CorrectScoreOutcomes.tsx" />
         <option value="$PROJECT_DIR$/src/utils/constants/index.ts" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
         <option value="$PROJECT_DIR$/src/containers/Home/Home.tsx" />
         <option value="$PROJECT_DIR$/src/containers/EventDetailsPage/EventDetailsPage.tsx" />
         <option value="$PROJECT_DIR$/src/components/BetSlipItem/BetSlipItem.tsx" />
-        <option value="$PROJECT_DIR$/src/components/OutcomeElement/OutcomeElement.tsx" />
-        <option value="$PROJECT_DIR$/src/components/MarketElement/MarketElement.tsx" />
         <option value="$PROJECT_DIR$/src/components/Price/Price.tsx" />
         <option value="$PROJECT_DIR$/src/containers/AppBody/AppBody.tsx" />
         <option value="$PROJECT_DIR$/src/components/EventElement/EventElement.tsx" />
+        <option value="$PROJECT_DIR$/src/components/MarketElement/MarketElement.tsx" />
+        <option value="$PROJECT_DIR$/src/components/WinDrawWinOutcomes/WinDrawWinOutcomes.tsx" />
+        <option value="$PROJECT_DIR$/src/components/CorrectScoreOutcomes/CorrectScoreOutcomes.tsx" />
+        <option value="$PROJECT_DIR$/src/components/OutcomeElement/OutcomeElement.tsx" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="2079" />
-    <option name="y" value="-231" />
+    <option name="x" value="1912" />
+    <option name="y" value="-229" />
     <option name="width" value="1936" />
-    <option name="height" value="1048" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -267,6 +205,73 @@
               <item name="js-test" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="js-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="EventElement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="EventTypeWidget" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="MarketElement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="OutcomeElement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Price" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="WinDrawWinOutcomes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="js-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="js-test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -277,7 +282,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/skybet" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -331,18 +336,19 @@
       <workItem from="1566983590924" duration="20857000" />
       <workItem from="1567021502482" duration="92000" />
       <workItem from="1567030612969" duration="7334000" />
-      <workItem from="1567073145977" duration="5557000" />
+      <workItem from="1567073145977" duration="6749000" />
+      <workItem from="1567188167702" duration="3901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188321000" />
+    <option name="totallyTimeSpent" value="193414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-229" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49601063" visible="true" weight="0.0890411" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49601063" weight="0.0890411" />
       <window_info id="Favorites" order="1" sideWeight="0.50398934" side_tool="true" weight="0.11275026" />
       <window_info id="Structure" order="2" sideWeight="0.5013889" side_tool="true" weight="0.21548998" />
       <window_info id="npm" order="3" sideWeight="0.50405407" side_tool="true" weight="0.14172813" />
@@ -363,13 +369,13 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49601063" visible="true" weight="0.112223394" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49601063" visible="true" weight="0.0890411" />
       <window_info id="Favorites" order="1" sideWeight="0.50398934" side_tool="true" weight="0.11275026" />
       <window_info id="Structure" order="2" sideWeight="0.5013889" side_tool="true" weight="0.21548998" />
       <window_info id="npm" order="3" sideWeight="0.50405407" side_tool="true" weight="0.14172813" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -378,7 +384,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.17334779" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.25893825" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -414,30 +420,10 @@
     <entry file="file://$PROJECT_DIR$/src/components/Events/Events.tsx" />
     <entry file="file://$PROJECT_DIR$/src/containers/Home/Event.tsx" />
     <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts" />
-    <entry file="file://$PROJECT_DIR$/src/components/EventTypeWidget/EventTypeWidget.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/Typography/Typography.d.ts" />
     <entry file="file://$PROJECT_DIR$/src/store/action.ts" />
     <entry file="file://$PROJECT_DIR$/src/store/reducer.ts" />
     <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/index.d.ts" />
-    <entry file="file://$PROJECT_DIR$/src/components/WinDrawWinOutcomes/WinDrawWinOutcomes.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="70" column="15" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/store.ts" />
     <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/Grid/Grid.d.ts" />
     <entry file="file://$PROJECT_DIR$/public/index.html">
@@ -459,13 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/constants/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -483,10 +462,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CorrectScoreOutcomes/CorrectScoreOutcomes.tsx">
+    <entry file="file://$PROJECT_DIR$/src/containers/AppBody/AppBody.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="99" column="15" selection-start-line="99" selection-start-column="15" selection-end-line="99" selection-end-column="15" />
+        <state relative-caret-position="2278">
+          <caret line="166" column="38" selection-start-line="166" selection-start-column="38" selection-end-line="166" selection-end-column="42" />
+          <caret line="165" column="38" selection-start-line="165" selection-start-column="38" selection-end-line="165" selection-end-column="40" />
+          <caret line="153" column="38" selection-start-line="153" selection-start-column="38" selection-end-line="153" selection-end-column="42" />
+          <caret line="149" column="38" selection-start-line="149" selection-start-column="38" selection-end-line="149" selection-end-column="42" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -495,8 +477,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/BetSlip/BetSlip.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-622">
-          <caret line="69" column="39" lean-forward="true" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+        <state relative-caret-position="219">
+          <caret line="167" column="34" lean-forward="true" selection-start-line="167" selection-start-column="34" selection-end-line="167" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Home/Home.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2737">
+          <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -505,48 +497,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/BetSlipItem/BetSlipItem.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1033">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="663">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/OutcomeElement/OutcomeElement.tsx">
+    <entry file="file://$PROJECT_DIR$/src/components/EventTypeWidget/EventTypeWidget.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="102">
+          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/constants/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Price/Price.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MarketElement/MarketElement.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/AppBody/AppBody.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="404">
+          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -556,17 +535,7 @@
     <entry file="file://$PROJECT_DIR$/src/containers/EventDetailsPage/EventDetailsPage.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
-          <caret line="236" column="22" lean-forward="true" selection-start-line="236" selection-start-column="22" selection-end-line="236" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Home/Home.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="290" column="35" lean-forward="true" selection-start-line="290" selection-start-column="35" selection-end-line="290" selection-end-column="35" />
+          <caret line="242" column="35" lean-forward="true" selection-start-line="242" selection-start-column="35" selection-end-line="242" selection-end-column="35" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -575,8 +544,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/EventElement/EventElement.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="142" column="84" selection-start-line="142" selection-start-column="84" selection-end-line="142" selection-end-column="84" />
+        <state relative-caret-position="-4">
+          <caret line="145" column="19" lean-forward="true" selection-start-line="145" selection-start-column="19" selection-end-line="145" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MarketElement/MarketElement.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="171" column="40" selection-start-line="171" selection-start-column="40" selection-end-line="171" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/WinDrawWinOutcomes/WinDrawWinOutcomes.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CorrectScoreOutcomes/CorrectScoreOutcomes.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/OutcomeElement/OutcomeElement.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

@@ -45,7 +45,7 @@ const WinDrawWinOutcomes: React.FC<WinDrawWinOutcomesType> = ({classes, outcomes
       justify='space-between'
     >
       {
-        outcomes.map( (outcome, index) =>
+        Object.values(outcomes).map( (outcome: any, index) =>
           <Grid
             item={true}
             key={`${outcome.outcomeId}${index}`}

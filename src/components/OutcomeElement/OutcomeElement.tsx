@@ -78,10 +78,8 @@ class OutcomeElement extends React.Component<OutcomeElementType, {}> {
         name: eventName
       },
       updateSlip,
-      outcome
+      outcome,
     } = this.props;
-
-    // console.log('render in OutcomeElement');
 
     return (
       <React.Fragment>
@@ -93,6 +91,7 @@ class OutcomeElement extends React.Component<OutcomeElementType, {}> {
               direction='row'
               justify='space-between'
               alignItems='center'
+              wrap='nowrap'
             >
               <Grid>
                 {outcome.name}

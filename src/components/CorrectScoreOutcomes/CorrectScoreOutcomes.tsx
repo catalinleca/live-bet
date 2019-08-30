@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {
+  Divider,
   Theme,
   withStyles,
   WithStyles,
@@ -32,15 +33,12 @@ interface ICorrectScoreOutcomesProps extends ICorrectScoreOutcomesComponentProps
 type CorrectScoreOutcomesType = ICorrectScoreOutcomesProps & WithStyles<keyof ReturnType<typeof styles>>;
 
 const CorrectScoreOutcomes: React.FC<CorrectScoreOutcomesType> = ({classes, outcomes, market, event, updateSlip}) => {
-
-  const outcomesByType = outcomes && outcomes.reduce( (acc, currentValue) => {
+  const outcomesByType = Object.values(outcomes).reduce( (acc, currentValue: any) => {
     return {
       ...acc,
       [currentValue.type]: acc[currentValue.type] ? [...acc[currentValue.type], currentValue] : [currentValue]
     }
   }, {})
-
-  console.log('outcomesByType: ', outcomesByType);
 
   return (
     <Grid
@@ -83,12 +81,11 @@ const CorrectScoreOutcomes: React.FC<CorrectScoreOutcomesType> = ({classes, outc
                           event={event}
                           updateSlip={updateSlip}
                         />
+                        <Divider/>
                       </Grid>
                     )
                   })
-
                 }
-
               </Grid>
             )
           })
